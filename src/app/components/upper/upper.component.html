@@ -7,7 +7,11 @@
     *ngIf="hot == false"
   />
   <div class="weather-data">
-    <div class="location">Delhi</div>
-    <div class="temprature">{{ 25 | number: "1.0-0" }}°C</div>
+    <div class="location">
+      {{ upperWeatherData?.location?.name | uppercase }}
+    </div>
+    <div class="temprature">
+      {{ upperWeatherData?.current?.temp_c | number: "1.0-0" }}°C
+    </div>
   </div>
 </div>

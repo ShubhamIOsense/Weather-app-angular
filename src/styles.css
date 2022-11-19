@@ -36,7 +36,7 @@ body {
   align-items: center;
 }
 
-.container {
+.containerC {
   width: 500px;
   height: 80vh;
   background-color: rgb(81, 81, 189);
@@ -58,7 +58,7 @@ body {
   z-index: 1;
   color: white;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -89,7 +89,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   box-shadow: 5px 5px 5px 5px rgb(0, 9, 35);
 }
 
@@ -129,4 +129,9 @@ body {
 .info-block-value {
   color: white;
   font-size: 2rem;
+}
+
+.search-bar-container {
+  width: 100%;
+  padding: 1rem;
 }

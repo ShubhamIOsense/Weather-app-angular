@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  weatherUrl: "https://open-weather13.p.rapidapi.com/city/",
+  weatherUrl: "https://weatherapi-com.p.rapidapi.com/current.json",
 
   XRapidAPIHostHeaderName: "X-RapidAPI-Host",
-  XRapidAPIHostHeaderValue: "open-weather13.p.rapidapi.com",
+  XRapidAPIHostHeaderValue: "weatherapi-com.p.rapidapi.com",
   XRapidAPIKeyHeaderName: "X-RapidAPI-Key",
   XRapidAPIKeyheaderVlaue: "77243a639dmsh1d1715389c8f3c2p13bc84jsn8bf3117b06a4",
 };

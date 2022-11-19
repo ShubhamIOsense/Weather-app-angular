@@ -1,0 +1,18 @@
+<div class="search-bar-container">
+  <form (ngSubmit)="onSearch(f)" #f="ngForm">
+    <div class="row">
+      <div class="col-10 p-1">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search City"
+          ngModel
+          name="city_name"
+        />
+      </div>
+      <div class="col-2 p-1">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+</div>

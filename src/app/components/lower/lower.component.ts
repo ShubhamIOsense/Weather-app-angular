@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  faGlassWaterDroplet,
-  faTemperatureArrowDown,
-  faTemperatureArrowUp,
+  faCloud,
+  faTemperature2,
   faWater,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
@@ -15,8 +14,8 @@ import { WeatherService } from "src/app/services/weather.service";
   styleUrls: ["./lower.component.css"],
 })
 export class LowerComponent implements OnInit {
-  minTemp = faTemperatureArrowDown;
-  maxTemp = faTemperatureArrowUp;
+  minTemp = faTemperature2;
+  maxTemp = faCloud;
   humidity = faWater;
   wind = faWind;
 
@@ -25,9 +24,9 @@ export class LowerComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData("delhi").subscribe((data) => {
+    this.weatherService.weatherData.subscribe((data) => {
       this.weatherData = data;
-      console.log(this.weatherData);
+      console.log(data);
     });
   }
 

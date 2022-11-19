@@ -4,30 +4,34 @@
     <div class="info-block">
       <div class="info-block-label">
         <fa-icon [icon]="minTemp"></fa-icon>
-        <span>min</span>
+        <span>feels like</span>
       </div>
-      <!-- <div class="info-block-value">{{ weatherData.main.temp_min }}</div> -->
+      <div class="info-block-value">
+        {{ weatherData?.current?.feelslike_c }}°C
+      </div>
     </div>
     <div class="info-block">
       <div class="info-block-label">
         <fa-icon [icon]="maxTemp"></fa-icon>
-        <span>max</span>
+        <span>cloudy</span>
       </div>
-      <div class="info-block-value">28°C</div>
+      <div class="info-block-value">{{ weatherData?.current?.cloud }}%</div>
     </div>
     <div class="info-block">
       <div class="info-block-label">
         <fa-icon [icon]="humidity"></fa-icon>
         <span>humidity</span>
       </div>
-      <div class="info-block-value">60%</div>
+      <div class="info-block-value">{{ weatherData?.current?.humidity }}%</div>
     </div>
     <div class="info-block">
       <div class="info-block-label">
         <fa-icon [icon]="wind"></fa-icon>
         <span>wind</span>
       </div>
-      <div class="info-block-value">10km/h</div>
+      <div class="info-block-value">
+        {{ weatherData?.current?.wind_kph }}km/h
+      </div>
     </div>
   </div>
 </div>

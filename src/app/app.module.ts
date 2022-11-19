@@ -8,14 +8,22 @@ import { LowerComponent } from "./components/lower/lower.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { WeatherService } from "./services/weather.service";
 import { HttpClientModule } from "@angular/common/http";
+import { SearchBarComponent } from "./components/search-bar/search-bar.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, UpperComponent, LowerComponent],
+  declarations: [
+    AppComponent,
+    UpperComponent,
+    LowerComponent,
+    SearchBarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent],
