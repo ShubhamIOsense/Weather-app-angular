@@ -1,0 +1,13 @@
+<div class="upper">
+  <img src="../assets/hot.png" class="hot_img" alt="hot" *ngIf="hot == true" />
+  <img
+    src="../assets/cold.png"
+    class="cold_img"
+    alt="cold"
+    *ngIf="hot == false"
+  />
+  <div class="weather-data">
+    <div class="location">Delhi</div>
+    <div class="temprature">{{ 25 | number: "1.0-0" }}°C</div>
+  </div>
+</div>
