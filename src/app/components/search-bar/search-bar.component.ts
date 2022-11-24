@@ -9,6 +9,7 @@ import { WeatherService } from "src/app/services/weather.service";
 })
 export class SearchBarComponent implements OnInit {
   // cityName?: string;
+  showError: boolean = false;
 
   constructor(private weatherService: WeatherService) {}
 
@@ -17,5 +18,6 @@ export class SearchBarComponent implements OnInit {
   onSearch(form: NgForm) {
     console.log(form.value);
     this.weatherService.searchData(form.value.city_name);
+    this.weatherService.isError.subscribe((error) => (this.showError = error));
   }
 }

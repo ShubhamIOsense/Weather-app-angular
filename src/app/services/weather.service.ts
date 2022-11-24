@@ -10,6 +10,7 @@ import { WeatherData } from "../models/weather.model";
 export class WeatherService {
   constructor(private http: HttpClient) {}
   weatherData = new Subject<WeatherData>();
+  isError = new Subject<boolean>();
 
   getWeatherData(city: string) {
     this.http
@@ -25,9 +26,18 @@ export class WeatherService {
           ),
         params: new HttpParams().set("q", city),
       })
-      .subscribe((data) => {
-        this.weatherData.next(data);
-      });
+      .subscribe(
+        (data) => {
+          this.weatherData.next(data);
+          this.isError.next(false);
+        },
+        (error) => {
+          this.isError.next(true);
+          setTimeout(() => {
+            this.isError.next(false);
+          }, 3000);
+        }
+      );
   }
 
   searchData(name: string) {
